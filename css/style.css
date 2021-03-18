@@ -212,7 +212,7 @@ font-size: 2.2rem;
 margin-bottom: 5.4rem;
 }
 .banner {
-    background: url(../img/darkmode\ \(1\).png) center no-repeat;
+    background: url(../img/darkmode.png) center no-repeat;
     opacity: 0.9;
     background-size: cover;
     height: 100vh;
@@ -220,6 +220,14 @@ margin-bottom: 5.4rem;
     color: #fcfcfc;
 }
 }
+
+@media (max-width: 1132px) {
+    .container-links.on {
+        display:grid;
+        margin: 0px 35rem 0px 11rem;
+        grid-template-columns: 1fr 1fr;
+        }
+    }
 
 @media (max-width: 1008px) {
 .container-sobre-informacoes {
@@ -233,20 +241,25 @@ margin-top: -4rem;
     margin: auto;
     margin-left: -7rem;
 }
+
 .container-links.on {
-display:grid;
-margin: 0 38rem 0 3rem;
-grid-template-columns: 1fr 1fr;
-}
-.social-links, .social-links-back {
-    width: 8rem;
-height: 8rem;
-    font-size: 5px;
-}
+    display:grid;
+    margin: 0px 35rem 0px 3rem;
+    grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (max-width: 600px) {
 .container-sobre.on {
 margin-left: 1rem;
 }
+}
+
+@media (max-width: 475px) {
+    .social-links, .social-links-back {
+        width: 8rem;
+        height: 8rem;
+        font-size: 5px;
+        padding: 1px;
+    }
 }
