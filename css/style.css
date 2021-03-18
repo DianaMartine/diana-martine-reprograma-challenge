@@ -26,7 +26,7 @@ h1 {
 /* BANNER */
 
 .banner {
-    background: url(../img/darkmode\ \(1\).png) -28rem repeat;
+    background: url(../img/darkmode.png) -20rem -5rem repeat;
     opacity: 0.9;
     background-size: cover;
     height: 100vh;
@@ -77,9 +77,26 @@ background-attachment: fixed;
 /* Informações Sobre */
 
 .container-sobre {
+    opacity: 0;
+}
+
+.container-sobre.on {
+    animation-duration: 1s;
+    opacity: 1;
     max-width: 100vw;
     margin: 0 2rem;
-text-align:justify;
+    text-align: justify;
+    animation-name: fade;
+    transition: .2s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .container-sobre-titulo {
@@ -121,25 +138,42 @@ ul,
 }
 
 .container-links {
+    opacity: 0;
+    margin: 1rem 11rem;
+}
+
+.container-links.on {
+    opacity: 1;
     display: flex;
-    max-width: 95.2%;
     justify-content: space-between;
     margin: 1rem 11rem;
+    animation-name: fade;
+    transition: .2s;
+    animation-duration: 1s;
+}
+
+.social-links-back {
+    width: 12rem;
+    background: rgb(44, 2, 41);
+    margin: 2px;
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+    transition: transform 0.8s;
 }
 
 .social-links {
     width: 12rem;
+    height: 12rem;
     background: rgb(100, 3, 92);
-    margin: 2px;
+    padding: 1rem;
     text-align: center;
     border-radius: 8px;
     transition: 1s;
 }
 
 .social-links:hover {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+    transform: translate(10px, 10px);
 }
 
 .social-links a {
@@ -187,7 +221,7 @@ margin-bottom: 5.4rem;
 }
 }
 
-@media (max-width: 855px) {
+@media (max-width: 1008px) {
 .container-sobre-informacoes {
 display:block;
 margin-top: -4rem;
@@ -199,12 +233,12 @@ margin-top: -4rem;
     margin: auto;
     margin-left: -7rem;
 }
-.container-links {
+.container-links.on {
 display:grid;
 margin: 0 38rem 0 3rem;
 grid-template-columns: 1fr 1fr;
 }
-.social-links {
+.social-links, .social-links-back {
     width: 8rem;
 height: 8rem;
     font-size: 5px;
@@ -212,7 +246,7 @@ height: 8rem;
 }
 
 @media (max-width: 600px) {
-.container-sobre {
+.container-sobre.on {
 margin-left: 1rem;
 }
 }
