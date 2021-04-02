@@ -124,10 +124,11 @@ body {
 .sobre-descricao-destaque,
 .sobre-habilidades-titulo {
   font-size: 1.5rem;
+  margin-top: 3rem;
 }
 
 .sobre-habilidades-titulo {
-  margin-top: 1.5rem;
+  margin-top: 3rem;
 }
 
 ul,
